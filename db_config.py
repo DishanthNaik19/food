@@ -5,12 +5,9 @@ Created on Wed Aug 13 12:59:03 2025
 @author: Dishanth
 """
 
-import mysql.connector
+import sqlite3
 
 def get_connection():
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",         # your MySQL username
-        password="qwerty123456@#$", # your MySQL password
-        database="food_wastage"
-    )
+    # Connect to SQLite database file in the same folder as app.py
+    return sqlite3.connect("food.db")
+
